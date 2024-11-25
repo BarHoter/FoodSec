@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request from Supplier to Producer</title>
+  <link rel="stylesheet" href="RequestsFromProducerstoSuplliers.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Send Request to Producer</h2>
+    
+    <form id="requestForm">
+      <label for="producerID">Producer ID:</label>
+      <input type="text" id="producerID" name="producerID" required placeholder="Enter Producer ID">
+      
+      <label for="barcode">Product Barcode:</label>
+      <input type="text" id="barcode" name="barcode" required placeholder="Enter Product Barcode">
+      
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" required min="1" placeholder="Enter Quantity">
+      
+      <button type="button" onclick="sendRequest()">Send Request</button>
+    </form>
+    
+    <p id="statusMessage"></p>
+  </div>
+
+  <script src="RequestsFromProducerstoSuplliers.js"></script>
+</body>
+</html>

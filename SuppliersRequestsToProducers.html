@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier Requests to Producers</title>
+    <link rel="stylesheet" href="SuppliersRequestsToProducers.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Supplier Requests to Producers</h1>
+
+        <!-- Form to add a new request -->
+        <form id="newRequestForm">
+            <label for="producerNumber">Insert Producer Number:</label>
+            <input type="text" id="producerNumber" required>
+            
+            <label for="productBarcode">Insert Product Barcode:</label>
+            <input type="text" id="productBarcode" required>
+
+            <label for="quantity">Insert Quantity:</label>
+            <input type="number" id="quantity" required>
+
+            <button type="button" onclick="addRequest()">Add Request</button>
+        </form>
+
+        <!-- Table to display existing requests -->
+        <div id="requestsContainer">
+            <!-- The table will be generated here by JavaScript -->
+        </div>
+    </div>
+
+    <script src="SuppliersRequestsToProducers.js"></script>
+</body>
+</html>

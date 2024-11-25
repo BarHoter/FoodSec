@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producer Page</title>
+    <style>
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            width: 200px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="welcome-message">Welcome to the Producers Page</h1>
+    <p id="error-message" style="color: red; font-weight: bold;"></p>
+    <p>Please choose an action:</p>
+
+    <a href="RequestsFromSuppliersToProducers.html" class="button">Requests From Consumers</a>
+    <!--<a href="RequestsFromProducerstoSuplliers.html" class="button">Requests to Suppliers</a>-->
+    <a href="ProducerTransactions.html" class="button">View Transactions</a>
+
+    <script>
+        // Retrieve the userID from localStorage
+        const userID = localStorage.getItem('userID');
+
+        if (!userID) {
+            // If no userID is found, show an error message and stop further actions
+            document.getElementById('error-message').textContent = "No User ID found. Please return to the homepage.";
+            document.getElementById('welcome-message').style.display = "none"; // Hide the welcome message
+        } else {
+            // Display a personalized welcome message if userID exists
+            document.getElementById('welcome-message').textContent = `Welcome, Producer ${userID}!`;
+        }
+    </script>
+</body>
+</html>

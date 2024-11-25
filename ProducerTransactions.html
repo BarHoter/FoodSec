@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transactions Table</title>
+  <link rel="stylesheet" href="showtransactionsconsumers.css">
+</head>
+<body>
+
+<h2>Transactions Data</h2>
+
+<div>
+  <label for="startDate">Start Date:</label>
+  <input type="date" id="startDate">
+
+  <label for="endDate">End Date:</label>
+  <input type="date" id="endDate">
+
+  <button id="filterButton">Filter</button>
+</div>
+
+<table id="transactionsTable" border="1">
+  <!-- Table content will be dynamically generated -->
+</table>
+
+
+
+<div id="table-container">
+  <table id="transactionsTable">
+    <thead>
+
+    </thead>
+    <tbody id="table-body">
+      <!-- Rows will be dynamically added here -->
+    </tbody>
+  </table>
+</div>
+
+
+
+<script src="ProducersTransactions.js"></script>
+
+</body>
+</html>
